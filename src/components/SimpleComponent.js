@@ -2,5 +2,19 @@
 import 'react' from React;
 
 export default class SimpleComponent extends React.Component {
-  
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      mood: "happy"
+    }
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  render() {
+    return(
+      <div class="mood" onClick={this.handleClick}>{this.state.mood}</div>
+    )
+  }
 }
