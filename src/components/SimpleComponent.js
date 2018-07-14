@@ -12,6 +12,10 @@ export default class SimpleComponent extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  handleClick(){
+    (this.state.mood === 'happy') ? this.setState({mood: 'sad'}) : this.setState({mood:'happy'})
+  }
+
   render() {
     return(
       <div class="mood" onClick={this.handleClick}>{this.state.mood}</div>
